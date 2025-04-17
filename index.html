@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login funzionante!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .d1 {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="button"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function check() {
+            const username = document.f1.sname.value.trim();
+            const password = document.f1.pass.value.trim();
+
+            if (username === "") {
+                alert("Inserisci un user!");
+            } else if (password === "") {
+                alert("Inserisci una password!");
+            } else {
+                // Simula un login riuscito (puoi sostituirlo con fetch() se vuoi chiamare un server)
+                alert("Accesso effettuato");
+
+                // 🔁 Redirect alla pagina desiderata
+                window.location.href = "dashboard.html"; // cambia qui con la tua pagina
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="d1">
+        <h1>Accedi</h1>
+        <form name="f1" onsubmit="return false">
+            Username<br>
+            <input type="text" name="sname"><br>
+            Password<br>
+            <input type="password" name="pass"><br><br>
+            <input type="button" value="Accedi!" onclick="check()">
+        </form>
+    </div>
+</body>
+</html>
